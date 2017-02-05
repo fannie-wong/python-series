@@ -1,0 +1,19 @@
+#the usage of [:] and the other way to get the same result.
+#changed code
+words=['cat','windows','defenestrate','hello','okokoko']
+i=0
+for w in range(0,len(words)):
+    print(len(words))
+    if len(words[w+i])>6:
+        print(words[w+i])
+        words.insert(0,words[w+i])
+        print(w+i)
+        i=1+i
+        print(i)
+print(words)
+
+#original type
+for w in words[:]:
+    if len(w)>6:
+        words.insert(0,w)
+print(words)
