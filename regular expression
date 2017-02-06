@@ -1,6 +1,6 @@
 grammer:
 
-take abc as example:
+take abc for example:
 .         -> match any character expect "\n"                   -> a.c can match abc
 \         -> change the original meaning of the next character -> a\.c can match a.c
 [...]     -> match any character in the list                   -> a[bcd]e can match abe ace ade
