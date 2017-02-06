@@ -1,0 +1,14 @@
+import re
+s1="hellodear"
+w1="dear"
+m1=re.search(w1,s1)
+print(m1)
+
+print(re.search("world","hellodear"))
+print(re.search("\d","I love 123!"))
+print(re.search('[abcde]',"I love 123!"))
+print(re.search('[a-z]',"I love 123!"))
+print(re.search('a\.c',"a.c"))
+print(re.search('a[0-5]\.c',"a1.c"))
+print(re.search("[01]\d\d|2[0-4]\d|25[0-5]","188"))
+print(re.search("(([01]{0,1}\d{0,1}\d|2[0-4]{0,1}\d|25[0-5])\.){3}([01]{0,1}\d{0,1}\d|2[0-4]{0,1}\d|25[0-5])","192.188.1.1"))
