@@ -1,3 +1,4 @@
+
 import re
 s1="hellodear"
 w1="dear"
@@ -8,6 +9,7 @@ print(re.search("world","hellodear"))
 print(re.search("\d","I love 123!"))
 print(re.search('[abcde]',"I love 123!"))
 print(re.search('[a-z]',"I love 123!"))
+print(re.search(r"(a)(b)c\2","abcb"))  #\2 denote the grouped position
 print(re.search('a\.c',"a.c"))
 print(re.search('a[0-5]\.c',"a1.c"))
 print(re.search("[01]\d\d|2[0-4]\d|25[0-5]","188"))
