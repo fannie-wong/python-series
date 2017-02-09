@@ -1,0 +1,31 @@
+we can define function inside function:
+
+example1:
+def fun1(x):
+    def fun2(y):
+        return x*y
+    return fun2
+print(fun1(4)(8))
+#fun1(4) returns x*y with x=4
+#by setting y=8, we can get the result x*y=32
+
+example2: 
+#define y=8 in fun1, then by setting the parameter in fun2(y), the value can pass to fun2
+#be caution that while defining fun2(), the format should be coordinated with the return function.
+def fun1(x):
+    y=8
+    def fun2(y):
+        return x*y
+    return fun2(y)
+print(fun1(4))
+
+example3:
+#the usage of nonlocal to pass the value of x in fun3 to fun4
+def fun3():
+    x=5
+    def fun4():
+        nonlocal x
+        x*=x
+        return x
+    return fun4()
+print(fun3())
